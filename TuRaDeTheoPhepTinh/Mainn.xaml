@@ -1,0 +1,32 @@
+﻿<Window x:Class="TuRaDeTheoPhepTinh.Mainn"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TuRaDeTheoPhepTinh"
+        mc:Ignorable="d"
+        Title="Chọn cái nào đây nhỉ?" Height="450" Width="800" Loaded="Window_Loaded">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="79*"/>
+            <RowDefinition Height="341*"/>
+        </Grid.RowDefinitions>
+        <ComboBox Grid.Row="0" HorizontalContentAlignment="Center" >
+            <ComboBoxItem IsSelected="True" >
+                <Label Style="{StaticResource MaterialDesignLabel}" Content="Vui lòng chọn một dạng"/>
+            </ComboBoxItem>
+            <ComboBoxItem>
+                <Button x:Name="but" Click="but_Click" Width="782"> Dạng tự ra đề</Button>
+            </ComboBoxItem>
+            <ComboBoxItem>
+                <Button x:Name="ChonDapAn" Click="ChonDapAn_Click" Width="782" >Dạng chọn đáp án đúng</Button>
+            </ComboBoxItem>
+            <ComboBoxItem>
+                <Button x:Name="but2" Width="782">Hay là chọn cái này?</Button>
+            </ComboBoxItem>
+        </ComboBox>
+        <StackPanel x:Name="sp4" Grid.Row="1">
+            
+        </StackPanel>
+    </Grid>
+</Window>
