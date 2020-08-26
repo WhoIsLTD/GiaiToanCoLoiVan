@@ -5,18 +5,18 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:TuRaDeTheoPhepTinh"
         mc:Ignorable="d"
-        Title="Chọn cái nào đây nhỉ?" Height="450" Width="800" Loaded="Window_Loaded">
+        Title="Chọn cái nào đây nhỉ?" Height="450" Width="600" Loaded="Window_Loaded">
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="79*"/>
-            <RowDefinition Height="341*"/>
+            <RowDefinition Height="7*"/>
+            <RowDefinition Height="53*"/>
         </Grid.RowDefinitions>
-        <ComboBox Grid.Row="0" HorizontalContentAlignment="Center" >
+        <ComboBox Grid.Row="0" HorizontalContentAlignment="Center" Height="36" Margin="0,12,-0.4,0.8" >
             <ComboBoxItem IsSelected="True" >
                 <Label Style="{StaticResource MaterialDesignLabel}" Content="Vui lòng chọn một dạng"/>
             </ComboBoxItem>
             <ComboBoxItem>
-                <Button x:Name="but" Click="but_Click" Width="782"> Dạng tự ra đề</Button>
+                <Button x:Name="but" Click="but_Click" Width="782">Dạng tự ra đề</Button>
             </ComboBoxItem>
             <ComboBoxItem>
                 <Button x:Name="ChonDapAn" Click="ChonDapAn_Click" Width="782" >Dạng chọn đáp án đúng</Button>
@@ -25,8 +25,10 @@
                 <Button x:Name="but2" Width="782">Hay là chọn cái này?</Button>
             </ComboBoxItem>
         </ComboBox>
-        <StackPanel x:Name="sp4" Grid.Row="1">
-            
-        </StackPanel>
+        <Viewbox Grid.Row="1" Margin="0,0.2,-0.4,0">
+            <StackPanel x:Name="sp4">
+
+            </StackPanel>
+        </Viewbox>
     </Grid>
 </Window>

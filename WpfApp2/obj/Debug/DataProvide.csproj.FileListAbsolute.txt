@@ -8,4 +8,14 @@ E:\Code\C#\GiaiToanCoLoiVan\WpfApp2\obj\Debug\DataProvide.csproj.GenerateResourc
 E:\Code\C#\GiaiToanCoLoiVan\WpfApp2\obj\Debug\DataProvide.csproj.CoreCompileInputs.cache
 E:\Code\C#\GiaiToanCoLoiVan\WpfApp2\obj\Debug\WpfApp2.exe
 E:\Code\C#\GiaiToanCoLoiVan\WpfApp2\obj\Debug\WpfApp2.pdb
-E:\Code\C#\GiaiToanCoLoiVan\WpfApp2\obj\Debug\DataProvide.csprojAssemblyReference.cache
+C:\Users\_LTD_\Desktop\GiaiToanCoLoiVan\WpfApp2\bin\Debug\WpfApp2.exe.config
+C:\Users\_LTD_\Desktop\GiaiToanCoLoiVan\WpfApp2\bin\Debug\WpfApp2.exe
+C:\Users\_LTD_\Desktop\GiaiToanCoLoiVan\WpfApp2\bin\Debug\WpfApp2.pdb
+C:\Users\_LTD_\Desktop\GiaiToanCoLoiVan\WpfApp2\obj\Debug\DataProvide.csprojAssemblyReference.cache
+C:\Users\_LTD_\Desktop\GiaiToanCoLoiVan\WpfApp2\obj\Debug\App.g.cs
+C:\Users\_LTD_\Desktop\GiaiToanCoLoiVan\WpfApp2\obj\Debug\WpfApp2_MarkupCompile.cache
+C:\Users\_LTD_\Desktop\GiaiToanCoLoiVan\WpfApp2\obj\Debug\WpfApp2.Properties.Resources.resources
+C:\Users\_LTD_\Desktop\GiaiToanCoLoiVan\WpfApp2\obj\Debug\DataProvide.csproj.GenerateResource.cache
+C:\Users\_LTD_\Desktop\GiaiToanCoLoiVan\WpfApp2\obj\Debug\DataProvide.csproj.CoreCompileInputs.cache
+C:\Users\_LTD_\Desktop\GiaiToanCoLoiVan\WpfApp2\obj\Debug\WpfApp2.exe
+C:\Users\_LTD_\Desktop\GiaiToanCoLoiVan\WpfApp2\obj\Debug\WpfApp2.pdb

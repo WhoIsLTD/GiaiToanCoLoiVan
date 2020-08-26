@@ -48,14 +48,20 @@
         <Label Content="Bài toán: " Name="lab0" Grid.Row="2" FontSize="18" FontWeight="Bold" Margin="0,6.2,0.2,1.4"/>
         <Label Content="Đề bài: " Name="lab" Visibility="Hidden" Grid.Row="2" FontSize="18" FontWeight="Bold" Margin="0,6.2,0.2,1.4"/>
         <Label Content="Bài giải: " Grid.Row="2" FontSize="18" FontWeight="Bold" Margin="387,6.2,0,1.4" Grid.ColumnSpan="2"/>
-        <RichTextBox Grid.Row="3" Background="AliceBlue" Margin="5,1.6,6.2,57" Grid.RowSpan="2">
+        <TextBox Name="BaiToan0" Grid.Row="3" Background="AliceBlue" Margin="5,1.6,6.2,57" Grid.RowSpan="2">
+            
+        </TextBox>
+        <TextBox Name="LoiGiai0" Grid.Row="3" Grid.Column="1" Background="AliceBlue" Margin="5.8,1.6,5,57" Grid.RowSpan="2">
+            
+        </TextBox>
+        <RichTextBox Name="BaiToan" Grid.Row="3" Background="AliceBlue" Margin="5,1.6,6.2,57" Grid.RowSpan="2" Visibility="Hidden">
             <FlowDocument>
-                <Paragraph Name="BaiToan"/>
+                <Paragraph  FontSize="22"/>
             </FlowDocument>
         </RichTextBox>
-        <RichTextBox Grid.Row="3" Grid.Column="1" Background="AliceBlue" Margin="5.8,1.6,5,57" Grid.RowSpan="2">
+        <RichTextBox Name="LoiGiai" Grid.Row="3" Grid.Column="1" Background="AliceBlue" Margin="5.8,1.6,5,57" Grid.RowSpan="2" Visibility="Hidden">
             <FlowDocument>
-                <Paragraph FontSize="25" Name="LoiGiai" FontFamily="Palatino Linotype" Typography.Fraction="Stacked"/>
+                <Paragraph FontSize="22" />
             </FlowDocument>
         </RichTextBox>
 
@@ -70,8 +76,11 @@
             <Button x:Name="btnEdit" Grid.Column="1" Style="{StaticResource MaterialDesignFloatingActionAccentButton}" ToolTip="Edit" Width="48" Height="48" Click="btnEdit_Click">
                 <materialDesign:PackIcon Kind="Edit" Height="24" Width="24" />
             </Button>
-            <Button x:Name="btnNext" Grid.Column="2" Style="{StaticResource MaterialDesignFloatingActionAccentButton}" ToolTip="Refresh" Width="48" Height="48" Click="btnNext_Click">
+            <!--<Button x:Name="btnNext" Grid.Column="2" Style="{StaticResource MaterialDesignFloatingActionAccentButton}" ToolTip="Refresh" Width="48" Height="48" Click="btnNext_Click">
                 <materialDesign:PackIcon Kind="ArrowRightBold" Height="24" Width="24" />
+            </Button>-->
+            <Button x:Name="btnCheck" Grid.Column="3" Style="{StaticResource MaterialDesignFloatingActionAccentButton}" ToolTip="Check" Width="48" Height="48" Click="btnCheck_Click">
+                <materialDesign:PackIcon Kind="Tick" Height="24" Width="24" />
             </Button>
         </Grid>
     </Grid>

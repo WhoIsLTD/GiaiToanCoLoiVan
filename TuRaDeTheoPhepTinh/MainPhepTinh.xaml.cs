@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Xml.Linq;
 using DataProvide;
 using XacDinhLoiGiaiDung;
 
@@ -39,25 +40,33 @@ namespace TuRaDeTheoPhepTinh
         private void SetData()
         {
             tblQuestion.Text = phepTinh.DeBai;
-            //BaiToan.Inlines.Add(phepTinh.BaiToan);
-            //LoiGiai.Inlines.Add(phepTinh.LoiGiai);
+            BaiToan0.Text = phepTinh.BaiToan;
+            LoiGiai0.Text = phepTinh.LoiGiai;
             if (phepTinh.Check == true)
             {
                 card0.Visibility = Visibility.Visible;
                 lab0.Visibility = Visibility.Visible;
                 title0.Visibility = Visibility.Visible;
+                BaiToan0.Visibility = Visibility.Visible;
+                LoiGiai0.Visibility = Visibility.Visible;
                 card.Visibility = Visibility.Hidden;
                 lab.Visibility = Visibility.Hidden;
                 title.Visibility = Visibility.Hidden;
+                BaiToan.Visibility = Visibility.Hidden;
+                LoiGiai.Visibility = Visibility.Hidden;
             }
             else
             {
                 title.Visibility = Visibility.Visible;
                 card.Visibility = Visibility.Visible;
                 lab.Visibility = Visibility.Visible;
+                BaiToan.Visibility = Visibility.Visible;
+                LoiGiai.Visibility = Visibility.Visible;
                 title0.Visibility = Visibility.Hidden;
                 card0.Visibility = Visibility.Hidden;
                 lab0.Visibility = Visibility.Hidden;
+                BaiToan0.Visibility = Visibility.Hidden;
+                LoiGiai0.Visibility = Visibility.Hidden;
             }
         }
         private PhepTinh AddList()
@@ -129,19 +138,39 @@ namespace TuRaDeTheoPhepTinh
                 phepTinh = editTuRaDe.GetPhepTinh();
                 //i += 1;
                 SetData();
-
             }
         }
 
-        private void btnCheckAnswer_Click(object sender, RoutedEventArgs e)
-        {
 
-        }
+        //private void btnnext_click(object sender, routedeventargs e)
+        //{
+        //    j = 1;
+        //    this.next();
+        //}
 
-        private void btnNext_Click(object sender, RoutedEventArgs e)
+        private void btnCheck_Click(object sender, RoutedEventArgs e)
         {
-            //j = 1;
-            //this.Next();
+            XDocument Xdoc = new XDocument(new XElement("Users"));
+            if (System.IO.File.Exists(Environment.CurrentDirectory + @"\Ques\Users.xml"))
+                Xdoc = XDocument.Load(Environment.CurrentDirectory + @"\Ques\Users.xml");
+            else
+                Xdoc = new XDocument();
+
+            XElement xml = /*new XElement("Users",*/
+                            new XElement("BaiToan",
+                            new XElement("DeBai", tblQuestion.Text),
+                            new XElement("BaiToan", BaiToan0.Text),
+                            new XElement("LoiGiai", LoiGiai0.Text)
+                            );
+
+            if (Xdoc.Descendants().Count() > 0)
+                Xdoc.Descendants().First().Add(xml);
+            else
+            {
+                Xdoc.Add(xml);
+            }
+
+            Xdoc.Save(Environment.CurrentDirectory + @"\Ques\Users.xml");
         }
 
         //private void Window_Loaded()

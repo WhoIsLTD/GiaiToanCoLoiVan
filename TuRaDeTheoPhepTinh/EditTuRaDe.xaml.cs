@@ -59,10 +59,10 @@ namespace TuRaDeTheoPhepTinh
                 };
                 phepTinhs.Add(phepTinh);
             }
-            phepTinhs[0].DeBai = "Em hãy tự tạo ra một bài toán có phép tính sau: 10 + 7. Sau đó giải bài toán đó.";
-            phepTinhs[0].BaiToan = @"";
-            phepTinhs[0].LoiGiai = @"";
-            phepTinhs[0].Check = true;
+            //phepTinhs[0].DeBai = "Em hãy tự tạo ra một bài toán có phép tính sau: 10 + 7. Sau đó giải bài toán đó.";
+            //phepTinhs[0].BaiToan = @"";
+            //phepTinhs[0].LoiGiai = @"";
+            //phepTinhs[0].Check = true;
             phepTinhs[1].DeBai = "Em hãy tự tạo ra một bài toán có phép tính sau: 13 + 4. Sau đó giải bài toán đó.";
             phepTinhs[1].BaiToan = @"";
             phepTinhs[1].LoiGiai = @"";
