@@ -34,6 +34,7 @@ namespace TuRaDeTheoPhepTinh
         public MainPhepTinh()
         {
             InitializeComponent();
+            phepTinhs = GetXML();
             phepTinh = AddList();
             //if (j == 1)
             //    Next();
@@ -83,10 +84,10 @@ namespace TuRaDeTheoPhepTinh
         private PhepTinh AddList()
         {
             PhepTinh phepTinh = new PhepTinh();
-            phepTinh.DeBai = "Em hãy tự tạo ra một bài toán có phép tính sau: 10 + 7. Sau đó giải bài toán đó.";
-            phepTinh.BaiToan = @"";
-            phepTinh.LoiGiai = @"";
-            phepTinh.Check = true;
+            phepTinh.DeBai = phepTinhs[0].DeBai;
+            phepTinh.BaiToan = phepTinhs[0].BaiToan;
+            phepTinh.LoiGiai = phepTinhs[0].LoiGiai;
+            phepTinh.Check = phepTinhs[0].Check;
             return phepTinh;
         }
         //public void Next()
@@ -136,7 +137,10 @@ namespace TuRaDeTheoPhepTinh
         //}
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
-            
+            SetData();
+        }
+        private List<PhepTinh> GetXML()
+        {
             var doc = XDocument.Load(Environment.CurrentDirectory + "/Ques/Users.xml");
 
             var people = doc.Root
@@ -149,9 +153,7 @@ namespace TuRaDeTheoPhepTinh
                     Check = bool.Parse(node.Element("Check").Value)
                 })
                 .ToList();
-            phepTinhs = people;
-            SetData();
-
+            return people;
         }
 
         private void btnEdit_Click(object sender, RoutedEventArgs e)
@@ -202,7 +204,7 @@ namespace TuRaDeTheoPhepTinh
         //private void Window_Loaded()
         //{
 
-        
+
         //}
     }
 }

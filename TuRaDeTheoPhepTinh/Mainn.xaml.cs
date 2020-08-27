@@ -21,11 +21,11 @@ namespace TuRaDeTheoPhepTinh
     /// </summary>
     public partial class Mainn : Window
     {
-        PhepTinh phepTinh;
+        //PhepTinh phepTinh;
         public Mainn()
         {
             InitializeComponent();
-            phepTinh = AddList();
+            //phepTinh = AddList();
         }
         private void LoadWindow()
         {
@@ -36,14 +36,14 @@ namespace TuRaDeTheoPhepTinh
             LoadWindow();
         }
 
-        private PhepTinh AddList()
-        {
-            PhepTinh phepTinh = new PhepTinh();
-            phepTinh.DeBai = "Em hãy tự tạo ra một bài toán có phép tính sau: 10 + 7. Sau đó giải bài toán đó.";
-            phepTinh.BaiToan = @"";
-            phepTinh.LoiGiai = @"";
-            return phepTinh;
-        }
+        //private PhepTinh AddList()
+        //{
+        //    PhepTinh phepTinh = new PhepTinh();
+        //    phepTinh.DeBai = "Em hãy tự tạo ra một bài toán có phép tính sau: 10 + 7. Sau đó giải bài toán đó.";
+        //    phepTinh.BaiToan = @"";
+        //    phepTinh.LoiGiai = @"";
+        //    return phepTinh;
+        //}
 
         private void but_Click(object sender, RoutedEventArgs e)
         {
