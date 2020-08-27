@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -13,6 +14,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Xml.Linq;
+using System.Xml.Serialization;
 using DataProvide;
 using XacDinhLoiGiaiDung;
 
@@ -69,6 +71,15 @@ namespace TuRaDeTheoPhepTinh
                 LoiGiai0.Visibility = Visibility.Hidden;
             }
         }
+        //private PhepTinh AddList()
+        //{
+        //    PhepTinh phepTinh = new PhepTinh();
+        //    phepTinh.DeBai = "Em hãy tự tạo ra một bài toán có phép tính sau: 10 + 7. Sau đó giải bài toán đó.";
+        //    phepTinh.BaiToan = @"";
+        //    phepTinh.LoiGiai = @"";
+        //    phepTinh.Check = true;
+        //    return phepTinh;
+        //}
         private PhepTinh AddList()
         {
             PhepTinh phepTinh = new PhepTinh();
@@ -125,7 +136,22 @@ namespace TuRaDeTheoPhepTinh
         //}
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
+            
+            var doc = XDocument.Load(Environment.CurrentDirectory + "/Ques/Users.xml");
+
+            var people = doc.Root
+                .Descendants("BaiTap")
+                .Select(node => new PhepTinh
+                {
+                    BaiToan = node.Element("BaiToan").Value,
+                    DeBai = node.Element("DeBai").Value,
+                    LoiGiai = node.Element("LoiGiai").Value,
+                    Check = bool.Parse(node.Element("Check").Value)
+                })
+                .ToList();
+            phepTinhs = people;
             SetData();
+
         }
 
         private void btnEdit_Click(object sender, RoutedEventArgs e)
@@ -151,18 +177,18 @@ namespace TuRaDeTheoPhepTinh
         private void btnCheck_Click(object sender, RoutedEventArgs e)
         {
             XDocument Xdoc = new XDocument(new XElement("Users"));
-            if (System.IO.File.Exists(Environment.CurrentDirectory + @"\Ques\Users.xml"))
-                Xdoc = XDocument.Load(Environment.CurrentDirectory + @"\Ques\Users.xml");
+            if (System.IO.File.Exists(Environment.CurrentDirectory + "/Ques/Users.xml"))
+                Xdoc = XDocument.Load(Environment.CurrentDirectory + "/Ques/Users.xml");
             else
                 Xdoc = new XDocument();
 
             XElement xml = /*new XElement("Users",*/
-                            new XElement("BaiToan",
+                            new XElement("BaiTap",
                             new XElement("DeBai", tblQuestion.Text),
                             new XElement("BaiToan", BaiToan0.Text),
-                            new XElement("LoiGiai", LoiGiai0.Text)
+                            new XElement("LoiGiai", LoiGiai0.Text),
+                            new XElement("Check", phepTinh.Check)
                             );
-
             if (Xdoc.Descendants().Count() > 0)
                 Xdoc.Descendants().First().Add(xml);
             else
@@ -170,12 +196,13 @@ namespace TuRaDeTheoPhepTinh
                 Xdoc.Add(xml);
             }
 
-            Xdoc.Save(Environment.CurrentDirectory + @"\Ques\Users.xml");
+            Xdoc.Save(Environment.CurrentDirectory + "/Ques/Users.xml");
         }
 
         //private void Window_Loaded()
         //{
-        //    throw new NotImplementedException();
+
+        
         //}
     }
 }
