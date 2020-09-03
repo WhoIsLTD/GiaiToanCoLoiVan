@@ -8,4 +8,3 @@ E:\Code\C#\GiaiToanCoLoiVan\WpfApp2\obj\Debug\DataProvide.csproj.GenerateResourc
 E:\Code\C#\GiaiToanCoLoiVan\WpfApp2\obj\Debug\DataProvide.csproj.CoreCompileInputs.cache
 E:\Code\C#\GiaiToanCoLoiVan\WpfApp2\obj\Debug\WpfApp2.exe
 E:\Code\C#\GiaiToanCoLoiVan\WpfApp2\obj\Debug\WpfApp2.pdb
-E:\Code\C#\GiaiToanCoLoiVan\WpfApp2\obj\Debug\DataProvide.csprojAssemblyReference.cache
