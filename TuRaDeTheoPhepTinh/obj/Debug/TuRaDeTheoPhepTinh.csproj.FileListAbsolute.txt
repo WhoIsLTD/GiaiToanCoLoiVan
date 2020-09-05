@@ -60,3 +60,35 @@ C:\Users\_LTD_\Desktop\GiaiToanCoLoiVan\TuRaDeTheoPhepTinh\obj\Debug\TuRaDeTheoP
 C:\Users\_LTD_\Desktop\GiaiToanCoLoiVan\TuRaDeTheoPhepTinh\obj\Debug\TuRaDeTheoPhepTinh.csproj.CopyComplete
 C:\Users\_LTD_\Desktop\GiaiToanCoLoiVan\TuRaDeTheoPhepTinh\obj\Debug\TuRaDeTheoPhepTinh.exe
 C:\Users\_LTD_\Desktop\GiaiToanCoLoiVan\TuRaDeTheoPhepTinh\obj\Debug\TuRaDeTheoPhepTinh.pdb
+C:\Users\xuppe\OneDrive\Tài liệu\GitHub\GiaiToanCoLoiVan\TuRaDeTheoPhepTinh\bin\Debug\TuRaDeTheoPhepTinh.exe.config
+C:\Users\xuppe\OneDrive\Tài liệu\GitHub\GiaiToanCoLoiVan\TuRaDeTheoPhepTinh\bin\Debug\TuRaDeTheoPhepTinh.exe
+C:\Users\xuppe\OneDrive\Tài liệu\GitHub\GiaiToanCoLoiVan\TuRaDeTheoPhepTinh\bin\Debug\TuRaDeTheoPhepTinh.pdb
+C:\Users\xuppe\OneDrive\Tài liệu\GitHub\GiaiToanCoLoiVan\TuRaDeTheoPhepTinh\bin\Debug\MaterialDesignColors.dll
+C:\Users\xuppe\OneDrive\Tài liệu\GitHub\GiaiToanCoLoiVan\TuRaDeTheoPhepTinh\bin\Debug\MaterialDesignThemes.Wpf.dll
+C:\Users\xuppe\OneDrive\Tài liệu\GitHub\GiaiToanCoLoiVan\TuRaDeTheoPhepTinh\bin\Debug\MaterialDesignColors.pdb
+C:\Users\xuppe\OneDrive\Tài liệu\GitHub\GiaiToanCoLoiVan\TuRaDeTheoPhepTinh\bin\Debug\MaterialDesignThemes.Wpf.pdb
+C:\Users\xuppe\OneDrive\Tài liệu\GitHub\GiaiToanCoLoiVan\TuRaDeTheoPhepTinh\bin\Debug\MaterialDesignThemes.Wpf.xml
+C:\Users\xuppe\OneDrive\Tài liệu\GitHub\GiaiToanCoLoiVan\TuRaDeTheoPhepTinh\obj\Debug\TuRaDeTheoPhepTinh.csprojAssemblyReference.cache
+C:\Users\xuppe\OneDrive\Tài liệu\GitHub\GiaiToanCoLoiVan\TuRaDeTheoPhepTinh\obj\Debug\EditTuRaDe.g.cs
+C:\Users\xuppe\OneDrive\Tài liệu\GitHub\GiaiToanCoLoiVan\TuRaDeTheoPhepTinh\obj\Debug\Mainn.g.cs
+C:\Users\xuppe\OneDrive\Tài liệu\GitHub\GiaiToanCoLoiVan\TuRaDeTheoPhepTinh\obj\Debug\MainPhepTinh.g.cs
+C:\Users\xuppe\OneDrive\Tài liệu\GitHub\GiaiToanCoLoiVan\TuRaDeTheoPhepTinh\obj\Debug\App.g.cs
+C:\Users\xuppe\OneDrive\Tài liệu\GitHub\GiaiToanCoLoiVan\TuRaDeTheoPhepTinh\obj\Debug\TuRaDeTheoPhepTinh_MarkupCompile.cache
+C:\Users\xuppe\OneDrive\Tài liệu\GitHub\GiaiToanCoLoiVan\TuRaDeTheoPhepTinh\obj\Debug\TuRaDeTheoPhepTinh_MarkupCompile.lref
+C:\Users\xuppe\OneDrive\Tài liệu\GitHub\GiaiToanCoLoiVan\TuRaDeTheoPhepTinh\obj\Debug\App.baml
+C:\Users\xuppe\OneDrive\Tài liệu\GitHub\GiaiToanCoLoiVan\TuRaDeTheoPhepTinh\obj\Debug\EditTuRaDe.baml
+C:\Users\xuppe\OneDrive\Tài liệu\GitHub\GiaiToanCoLoiVan\TuRaDeTheoPhepTinh\obj\Debug\Mainn.baml
+C:\Users\xuppe\OneDrive\Tài liệu\GitHub\GiaiToanCoLoiVan\TuRaDeTheoPhepTinh\obj\Debug\MainPhepTinh.baml
+C:\Users\xuppe\OneDrive\Tài liệu\GitHub\GiaiToanCoLoiVan\TuRaDeTheoPhepTinh\obj\Debug\TuRaDeTheoPhepTinh.g.resources
+C:\Users\xuppe\OneDrive\Tài liệu\GitHub\GiaiToanCoLoiVan\TuRaDeTheoPhepTinh\obj\Debug\TuRaDeTheoPhepTinh.Properties.Resources.resources
+C:\Users\xuppe\OneDrive\Tài liệu\GitHub\GiaiToanCoLoiVan\TuRaDeTheoPhepTinh\obj\Debug\TuRaDeTheoPhepTinh.csproj.GenerateResource.cache
+C:\Users\xuppe\OneDrive\Tài liệu\GitHub\GiaiToanCoLoiVan\TuRaDeTheoPhepTinh\obj\Debug\TuRaDeTheoPhepTinh.csproj.CoreCompileInputs.cache
+C:\Users\xuppe\OneDrive\Tài liệu\GitHub\GiaiToanCoLoiVan\TuRaDeTheoPhepTinh\obj\Debug\TuRaDeTheoPhepTinh.csproj.CopyComplete
+C:\Users\xuppe\OneDrive\Tài liệu\GitHub\GiaiToanCoLoiVan\TuRaDeTheoPhepTinh\obj\Debug\TuRaDeTheoPhepTinh.exe
+C:\Users\xuppe\OneDrive\Tài liệu\GitHub\GiaiToanCoLoiVan\TuRaDeTheoPhepTinh\obj\Debug\TuRaDeTheoPhepTinh.pdb
+C:\Users\xuppe\OneDrive\Tài liệu\GitHub\GiaiToanCoLoiVan\TuRaDeTheoPhepTinh\bin\Debug\DataProvide.exe
+C:\Users\xuppe\OneDrive\Tài liệu\GitHub\GiaiToanCoLoiVan\TuRaDeTheoPhepTinh\bin\Debug\XacDinhLoiGiaiDung.exe
+C:\Users\xuppe\OneDrive\Tài liệu\GitHub\GiaiToanCoLoiVan\TuRaDeTheoPhepTinh\bin\Debug\DataProvide.pdb
+C:\Users\xuppe\OneDrive\Tài liệu\GitHub\GiaiToanCoLoiVan\TuRaDeTheoPhepTinh\bin\Debug\DataProvide.exe.config
+C:\Users\xuppe\OneDrive\Tài liệu\GitHub\GiaiToanCoLoiVan\TuRaDeTheoPhepTinh\bin\Debug\XacDinhLoiGiaiDung.pdb
+C:\Users\xuppe\OneDrive\Tài liệu\GitHub\GiaiToanCoLoiVan\TuRaDeTheoPhepTinh\bin\Debug\XacDinhLoiGiaiDung.exe.config

@@ -16,6 +16,7 @@ using System.Windows.Shapes;
 using System.Xml.Linq;
 using System.Xml.Serialization;
 using DataProvide;
+using Microsoft.Win32;
 using XacDinhLoiGiaiDung;
 
 namespace TuRaDeTheoPhepTinh
@@ -25,17 +26,23 @@ namespace TuRaDeTheoPhepTinh
     /// </summary>
     public partial class MainPhepTinh : UserControl
     {
-        private PhepTinh phepTinh;
-        //private ListPhepTinh phepTinhs = new ListPhepTinh();
-        private List<PhepTinh> phepTinhs = new List<PhepTinh>();
+
+        private PhepTinh phepTinh = new PhepTinh();
+        private TuRaDe tuRa = new TuRaDe();
+
         //private int i = 0, j = 0;
 
 
         public MainPhepTinh()
         {
             InitializeComponent();
-            phepTinhs = GetXML();
-            phepTinh = AddList();
+            phepTinh = AddToList();
+            BitmapImage bitmap = new BitmapImage();
+            bitmap.BeginInit();
+            bitmap.UriSource = new Uri(Environment.CurrentDirectory + "/Icon/short_hair_girl_question_mark_50px.png");
+            bitmap.EndInit();
+            img.Source = bitmap;
+            img1.Source = bitmap;
             //if (j == 1)
             //    Next();
 
@@ -47,6 +54,9 @@ namespace TuRaDeTheoPhepTinh
             LoiGiai0.Text = phepTinh.LoiGiai;
             if (phepTinh.Check == true)
             {
+                tblQuestion.Text = phepTinh.DeBai;
+                BaiToan0.Text = phepTinh.BaiToan;
+                LoiGiai0.Text = phepTinh.LoiGiai;
                 card0.Visibility = Visibility.Visible;
                 lab0.Visibility = Visibility.Visible;
                 title0.Visibility = Visibility.Visible;
@@ -60,6 +70,8 @@ namespace TuRaDeTheoPhepTinh
             }
             else
             {
+                BaiToan.Text = tuRa.DeBai;
+                LoiGiai.Text = tuRa.LoiGiai;
                 title.Visibility = Visibility.Visible;
                 card.Visibility = Visibility.Visible;
                 lab.Visibility = Visibility.Visible;
@@ -81,80 +93,42 @@ namespace TuRaDeTheoPhepTinh
         //    phepTinh.Check = true;
         //    return phepTinh;
         //}
-        private PhepTinh AddList()
-        {
-            PhepTinh phepTinh = new PhepTinh();
-            phepTinh.DeBai = phepTinhs[0].DeBai;
-            phepTinh.BaiToan = phepTinhs[0].BaiToan;
-            phepTinh.LoiGiai = phepTinhs[0].LoiGiai;
-            phepTinh.Check = phepTinhs[0].Check;
-            return phepTinh;
-        }
         //public void Next()
         //{
         //    i++;
         //    tblQuestion.Text = phepTinh.DeBai;
         //}
-        //private List<PhepTinh> AddToList()
-        //{
-        //    List<PhepTinh> phepTinhs = new List<PhepTinh>();
-        //    for (int i = 0; i < 6; i++)
-        //    {
-        //        PhepTinh phepTinh = new PhepTinh()
-        //        {
-        //            DeBai = "debai" + i.ToString(),
-        //            BaiToan = @"",
-        //            LoiGiai = @"",
-        //            Check = true
-        //        };
-        //        phepTinhs.Add(phepTinh);
-        //    }
-        //    phepTinhs[0].DeBai = "Em hãy tự tạo ra một bài toán có phép tính sau: 10 + 7. Sau đó giải bài toán đó.";
-        //    phepTinhs[0].BaiToan = @"";
-        //    phepTinhs[0].LoiGiai = @"";
-        //    phepTinhs[0].Check = true;
-        //    phepTinhs[1].DeBai = "Em hãy tự tạo ra một bài toán có phép tính sau: 13 + 4. Sau đó giải bài toán đó.";
-        //    phepTinhs[1].BaiToan = @"";
-        //    phepTinhs[1].LoiGiai = @"";
-        //    phepTinhs[1].Check = true;
-        //    phepTinhs[2].DeBai = "Em hãy tự tạo ra một bài toán có phép tính sau: 11 + 5. Sau đó giải bài toán đó.";
-        //    phepTinhs[2].BaiToan = @"";
-        //    phepTinhs[2].LoiGiai = @"";
-        //    phepTinhs[2].Check = true;
-        //    phepTinhs[3].DeBai = "Em hãy tự tạo ra một bài toán có phép tính sau: 19 + 1. Sau đó giải bài toán đó.";
-        //    phepTinhs[3].BaiToan = @"";
-        //    phepTinhs[3].LoiGiai = @"";
-        //    phepTinhs[3].Check = true;
-        //    phepTinhs[4].DeBai = "Em hãy tự tạo ra một bài toán có phép tính sau: 22 + 17. Sau đó giải bài toán đó.";
-        //    phepTinhs[4].BaiToan = @"";
-        //    phepTinhs[4].LoiGiai = @"";
-        //    phepTinhs[4].Check = true;
-        //    phepTinhs[5].DeBai = "Em hãy tự tạo ra một bài toán có phép tính sau: 10 + 10. Sau đó giải bài toán đó.";
-        //    phepTinhs[5].BaiToan = @"";
-        //    phepTinhs[5].LoiGiai = @"";
-        //    phepTinhs[5].Check = true;
-        //    return phepTinhs;
-        //}
+        private PhepTinh AddToList()
+        {
+            PhepTinh phepTinh = new PhepTinh()
+            {
+                DeBai = "Em hãy tự tạo ra một bài toán có phép tính sau: 10 + 7. Sau đó giải bài toán đó.",
+                BaiToan = @"",
+                LoiGiai = @"",
+                Check = true
+            };
+            return phepTinh;
+        }
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
             SetData();
         }
-        private List<PhepTinh> GetXML()
-        {
-            var doc = XDocument.Load(Environment.CurrentDirectory + "/Ques/Users.xml");
+        //private List<PhepTinh> GetXML()
+        //{
+        //    var doc = XDocument.Load(Environment.CurrentDirectory + "/Ques/Users.xml");
 
-            var people = doc.Root
-                .Descendants("BaiTap")
-                .Select(node => new PhepTinh
-                {
-                    BaiToan = node.Element("BaiToan").Value,
-                    DeBai = node.Element("DeBai").Value,
-                    LoiGiai = node.Element("LoiGiai").Value,
-                    Check = bool.Parse(node.Element("Check").Value)
-                })
-                .ToList();
-            return people;
-        }
+        //    var people = doc.Root
+        //        .Descendants("BaiTap")
+        //        .Select(node => new PhepTinh
+        //        {
+        //            BaiToan = node.Element("BaiToan").Value,
+        //            DeBai = node.Element("DeBai").Value,
+        //            LoiGiai = node.Element("LoiGiai").Value,
+        //            Check = bool.Parse(node.Element("Check").Value)
+        //        })
+        //        .ToList();
+        //    return people;
+        //}
 
         private void btnEdit_Click(object sender, RoutedEventArgs e)
         {
@@ -176,35 +150,96 @@ namespace TuRaDeTheoPhepTinh
         //    this.next();
         //}
 
-        private void btnCheck_Click(object sender, RoutedEventArgs e)
+        private void btnSave_Click(object sender, RoutedEventArgs e)
         {
-            XDocument Xdoc = new XDocument(new XElement("Users"));
-            if (System.IO.File.Exists(Environment.CurrentDirectory + "/Ques/Users.xml"))
-                Xdoc = XDocument.Load(Environment.CurrentDirectory + "/Ques/Users.xml");
-            else
-                Xdoc = new XDocument();
+            SaveFileDialog saveFileDialog = new SaveFileDialog();
+            XDocument Xdoc = new XDocument();
+            if (phepTinh.Check == true)
+            {
 
-            XElement xml = /*new XElement("Users",*/
-                            new XElement("BaiTap",
-                            new XElement("DeBai", tblQuestion.Text),
-                            new XElement("BaiToan", BaiToan0.Text),
-                            new XElement("LoiGiai", LoiGiai0.Text),
-                            new XElement("Check", phepTinh.Check)
-                            );
-            if (Xdoc.Descendants().Count() > 0)
-                Xdoc.Descendants().First().Add(xml);
+                saveFileDialog.Filter = "XML Files (*.pt)|*.pt";
+                bool? result = saveFileDialog.ShowDialog();
+                if (result == true)
+                {
+                    //if (System.IO.File.Exists(Environment.CurrentDirectory + "/Ques/Users.xml"))
+                    //    Xdoc = XDocument.Load(Environment.CurrentDirectory + "/Ques/Users.xml");
+                    //else
+                    //    Xdoc = new XDocument();
+                    XElement xml = /*new XElement("Users",*/
+                                    new XElement("BaiTap",
+                                    new XElement("DeBai", tblQuestion.Text),
+                                    new XElement("BaiToan", BaiToan0.Text),
+                                    new XElement("LoiGiai", LoiGiai0.Text),
+                                    new XElement("Check", phepTinh.Check)
+                                    );
+                    if (Xdoc.Descendants().Count() > 0)
+                        Xdoc.Descendants().First().Add(xml);
+                    else
+                        Xdoc.Add(xml);
+                    Xdoc.Save(saveFileDialog.FileName);
+                }
+            }
             else
             {
-                Xdoc.Add(xml);
+                saveFileDialog.Filter = "XML Files (*.rd)|*.rd";
+                bool? result = saveFileDialog.ShowDialog();
+                if (result == true)
+                {
+                    XElement xml = new XElement("BaiTap",
+                                   new XElement("DeBai", BaiToan.Text),
+                                   new XElement("LoiGiai", LoiGiai.Text)
+                                   );
+                    if (Xdoc.Descendants().Count() > 0)
+                        Xdoc.Descendants().First().Add(xml);
+                    else
+                        Xdoc.Add(xml);
+                    Xdoc.Save(saveFileDialog.FileName);
+                }
             }
-
-            Xdoc.Save(Environment.CurrentDirectory + "/Ques/Users.xml");
         }
 
-        //private void Window_Loaded()
-        //{
+        private void btnOpen_Click(object sender, RoutedEventArgs e)
+        {
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            openFileDialog.Filter = "XML Files (*.pt)|*.pt|XML Files (*.rd)|*.rd";
+            bool? result = openFileDialog.ShowDialog();
+            if (result == true)
+            {
+                var doc = XDocument.Load(openFileDialog.FileName);
+                FileInfo file = new FileInfo(openFileDialog.FileName);
+                string ext = file.Extension;
 
+                if (ext == ".pt")
+                {
+                    var people = doc.Descendants("BaiTap").Select(node => new PhepTinh
+                    {
+                        BaiToan = node.Element("BaiToan").Value,
+                        DeBai = node.Element("DeBai").Value,
+                        LoiGiai = node.Element("LoiGiai").Value,
+                        Check = bool.Parse(node.Element("Check").Value)
+                    })
+                    .ToList();
+                    phepTinh.BaiToan = people[0].BaiToan;
+                    phepTinh.DeBai = people[0].DeBai;
+                    phepTinh.LoiGiai = people[0].LoiGiai;
+                    phepTinh.Check = people[0].Check;
+                }
+                else
+                {
+                    phepTinh.Check = false;
+                    var people = doc.Descendants("BaiTap").Select(node => new TuRaDe
+                    {
+                        DeBai = node.Element("DeBai").Value,
+                        LoiGiai = node.Element("LoiGiai").Value
+                    })
+                    .ToList();
+                    tuRa.DeBai = people[0].DeBai;
+                    tuRa.LoiGiai = people[0].LoiGiai;
+                }
+                this.Window_Loaded(sender, e);
+            }
 
-        //}
+        }
+
     }
 }

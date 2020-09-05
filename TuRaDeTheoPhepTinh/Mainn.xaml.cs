@@ -25,7 +25,7 @@ namespace TuRaDeTheoPhepTinh
         public Mainn()
         {
             InitializeComponent();
-            //phepTinh = AddList();
+
         }
         private void LoadWindow()
         {
@@ -36,31 +36,14 @@ namespace TuRaDeTheoPhepTinh
             LoadWindow();
         }
 
-        //private PhepTinh AddList()
-        //{
-        //    PhepTinh phepTinh = new PhepTinh();
-        //    phepTinh.DeBai = "Em hãy tự tạo ra một bài toán có phép tính sau: 10 + 7. Sau đó giải bài toán đó.";
-        //    phepTinh.BaiToan = @"";
-        //    phepTinh.LoiGiai = @"";
-        //    return phepTinh;
-        //}
 
-        private void but_Click(object sender, RoutedEventArgs e)
+
+        private void TuRaDe_Click(object sender, RoutedEventArgs e)
         {
             sp4.Children.Clear();
             MainPhepTinh mainPhepTinh = new MainPhepTinh();
             sp4.Children.Add(mainPhepTinh);
-            //EditTuRaDe editTuRaDe = new EditTuRaDe(phepTinh);
-            //if(editTuRaDe.tab1.IsSelected == true)
-            //{
-            //    sp4.Children.Clear();
-            //    sp4.Children.Add(mainPhepTinh);
-            //}    
-            //else if( editTuRaDe.tab2.IsSelected == true)
-            //{
-            //    sp4.Children.Clear();
-            //    MainTuRaDe mainTuRaDe = new MainTuRaDe();
-            //    sp4.Children.Add(mainTuRaDe);
+
         }
 
         private void ChonDapAn_Click(object sender, RoutedEventArgs e)
@@ -68,6 +51,11 @@ namespace TuRaDeTheoPhepTinh
             sp4.Children.Clear();
             MainWindow mainWindow = new MainWindow();
             sp4.Children.Add(mainWindow);
+        }
+
+        private void but2_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

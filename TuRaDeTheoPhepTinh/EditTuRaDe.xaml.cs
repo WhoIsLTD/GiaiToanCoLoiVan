@@ -21,74 +21,32 @@ namespace TuRaDeTheoPhepTinh
     public partial class EditTuRaDe : Window
     {
         public bool buttonclick = false;
-        //private PhepTinh phepTinh;
+        private PhepTinh phepTinh;
         private List<PhepTinh> phepTinhs = new List<PhepTinh>();
-        int i = 0;
+        //int i = 0;
         public EditTuRaDe(PhepTinh phep)
         {
             InitializeComponent();
-            //phepTinh = phep;
-            phepTinhs = AddToList();
-            phepTinhs[0] = phep;
-            if (i != 0)
-                Next();
+            phepTinh = phep;
+            //if (i != 0)
+            //    Next();
         }
         private void setData()
         {
-            phepTinhs[i].DeBai = tblQuestion.Text;
-            phepTinhs[i].BaiToan = BaiToan.Text;
-            phepTinhs[i].LoiGiai = LoiGiai.Text;
+            phepTinh.DeBai = tblQuestion.Text;
+            //phepTinh.BaiToan = BaiToan.Text;
+            //phepTinh.LoiGiai = LoiGiai.Text;
         }
         private void LoadData()
         {
-            tblQuestion.Text = phepTinhs[i].DeBai;
-            BaiToan.Text = phepTinhs[i].BaiToan;
-            LoiGiai.Text = phepTinhs[i].LoiGiai;
-        }
-        private List<PhepTinh> AddToList()
-        {
-            List<PhepTinh> phepTinhs = new List<PhepTinh>();
-            for (int i = 0; i < 6; i++)
-            {
-                PhepTinh phepTinh = new PhepTinh()
-                {
-                    DeBai = "debai" + i.ToString(),
-                    BaiToan = @"",
-                    LoiGiai = @"",
-                    Check = true
-                };
-                phepTinhs.Add(phepTinh);
-            }
-            //phepTinhs[0].DeBai = "Em hãy tự tạo ra một bài toán có phép tính sau: 10 + 7. Sau đó giải bài toán đó.";
-            //phepTinhs[0].BaiToan = @"";
-            //phepTinhs[0].LoiGiai = @"";
-            //phepTinhs[0].Check = true;
-            phepTinhs[1].DeBai = "Em hãy tự tạo ra một bài toán có phép tính sau: 13 + 4. Sau đó giải bài toán đó.";
-            phepTinhs[1].BaiToan = @"";
-            phepTinhs[1].LoiGiai = @"";
-            phepTinhs[1].Check = true;
-            phepTinhs[2].DeBai = "Em hãy tự tạo ra một bài toán có phép tính sau: 11 + 5. Sau đó giải bài toán đó.";
-            phepTinhs[2].BaiToan = @"";
-            phepTinhs[2].LoiGiai = @"";
-            phepTinhs[2].Check = true;
-            phepTinhs[3].DeBai = "Em hãy tự tạo ra một bài toán có phép tính sau: 19 + 1. Sau đó giải bài toán đó.";
-            phepTinhs[3].BaiToan = @"";
-            phepTinhs[3].LoiGiai = @"";
-            phepTinhs[3].Check = true;
-            phepTinhs[4].DeBai = "Em hãy tự tạo ra một bài toán có phép tính sau: 22 + 17. Sau đó giải bài toán đó.";
-            phepTinhs[4].BaiToan = @"";
-            phepTinhs[4].LoiGiai = @"";
-            phepTinhs[4].Check = true;
-            phepTinhs[5].DeBai = "Em hãy tự tạo ra một bài toán có phép tính sau: 10 + 10. Sau đó giải bài toán đó.";
-            phepTinhs[5].BaiToan = @"";
-            phepTinhs[5].LoiGiai = @"";
-            phepTinhs[5].Check = true;
-            return phepTinhs;
+            tblQuestion.Text = phepTinh.DeBai;
+            //BaiToan.Text = phepTinh.BaiToan;
+            //LoiGiai.Text = phepTinh.LoiGiai;
         }
 
         public PhepTinh GetPhepTinh()
         {
-            return phepTinhs[i];
+            return phepTinh;
         }
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
@@ -103,9 +61,9 @@ namespace TuRaDeTheoPhepTinh
         {
 
             if (But1.IsChecked == true)
-                phepTinhs[i].Check = true;
+                phepTinh.Check = true;
             else
-                phepTinhs[i].Check = false;
+                phepTinh.Check = false;
             setData();
             this.DialogResult = true;
         }
@@ -115,9 +73,9 @@ namespace TuRaDeTheoPhepTinh
             if (But2.IsChecked == true)
             {
                 card2.Visibility = Visibility.Visible;
-                lab2.Visibility = Visibility.Visible;
+                tlQuestion.Visibility = Visibility.Visible;
                 card1.Visibility = Visibility.Hidden;
-                lab1.Visibility = Visibility.Hidden;
+                tblQuestion.Visibility = Visibility.Hidden;
             }
         }
 
@@ -126,21 +84,21 @@ namespace TuRaDeTheoPhepTinh
             if (But1.IsChecked == true)
             {
                 card1.Visibility = Visibility.Visible;
-                lab1.Visibility = Visibility.Visible;
+                tblQuestion.Visibility = Visibility.Visible;
                 card2.Visibility = Visibility.Hidden;
-                lab2.Visibility = Visibility.Hidden;
+                tlQuestion.Visibility = Visibility.Hidden;
             }
         }
 
-        private void Next()
-        {
-            i++;
-            LoadData();
-        }
+        //private void Next()
+        //{
+        //    i++;
+        //    LoadData();
+        //}
 
-        private void btnNext_Click(object sender, RoutedEventArgs e)
-        {
-            this.Next();
-        }
+        //private void btnNext_Click(object sender, RoutedEventArgs e)
+        //{
+        //    this.Next();
+        //}
     }
 }

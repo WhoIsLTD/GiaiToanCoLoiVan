@@ -11,21 +11,21 @@
             <RowDefinition Height="7*"/>
             <RowDefinition Height="53*"/>
         </Grid.RowDefinitions>
-        <ComboBox Grid.Row="0" HorizontalContentAlignment="Center" Height="36" Margin="0,12,-0.4,0.8" >
+        <ComboBox Grid.Row="0" HorizontalContentAlignment="Center" Height="51" Margin="0,-2,0,0" >
             <ComboBoxItem IsSelected="True" >
-                <Label Style="{StaticResource MaterialDesignLabel}" Content="Vui lòng chọn một dạng"/>
+                <Label Style="{StaticResource MaterialDesignLabel}" FontSize="20" Content="Vui lòng chọn một dạng"/>
             </ComboBoxItem>
             <ComboBoxItem>
-                <Button x:Name="but" Click="but_Click" Width="782">Dạng tự ra đề</Button>
+                <Button x:Name="TuRaDe" Click="TuRaDe_Click" Width="600">Dạng tự ra đề</Button>
             </ComboBoxItem>
             <ComboBoxItem>
-                <Button x:Name="ChonDapAn" Click="ChonDapAn_Click" Width="782" >Dạng chọn đáp án đúng</Button>
+                <Button x:Name="ChonDapAn" Click="ChonDapAn_Click" Width="600" >Dạng chọn đáp án đúng</Button>
             </ComboBoxItem>
             <ComboBoxItem>
-                <Button x:Name="but2" Width="782">Hay là chọn cái này?</Button>
+                <Button x:Name="but2" Width="600" Click="but2_Click">Hay là chọn cái này?</Button>
             </ComboBoxItem>
         </ComboBox>
-        <Viewbox Grid.Row="1" Margin="0,0.2,-0.4,0">
+        <Viewbox Grid.Row="1" Stretch="Fill" Margin="0,0.2,-0.4,0">
             <StackPanel x:Name="sp4">
 
             </StackPanel>

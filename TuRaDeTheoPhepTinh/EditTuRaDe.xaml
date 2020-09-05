@@ -21,30 +21,23 @@
             </Grid>
             <Grid Grid.Row="1">
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="192*"/>
-                    <ColumnDefinition Width="205*"/>
+                    <ColumnDefinition/>
                 </Grid.ColumnDefinitions>
                 <Grid.RowDefinitions>
                     <RowDefinition Height="auto"></RowDefinition>
-                    <RowDefinition Height="38.4"/>
-                    <RowDefinition Height="222.4"/>
+                    <RowDefinition Height="262"/>
                     <RowDefinition Height="80"/>
                 </Grid.RowDefinitions>
-                <materialDesign:Card x:Name="card1" Padding="16" Margin="8" Grid.Row="0" Grid.ColumnSpan="2">
-                    <TextBox Style="{DynamicResource MaterialDesignComboBoxEditableTextBox}" x:Name="tblQuestion" Text="Question" TextWrapping="Wrap" FontSize="25"></TextBox>
+                <materialDesign:Card x:Name="card1" Padding="16" Margin="8" Grid.Row="0">
+                    <TextBlock Text="Nhập câu hỏi cho dạng phép tính có sẵn" TextWrapping="Wrap" FontSize="25"></TextBlock>
                 </materialDesign:Card>
-                <materialDesign:Card Visibility="Hidden" x:Name="card2" Padding="16" Margin="8" Grid.Row="0" Grid.ColumnSpan="2">
-                    <TextBlock Style="{DynamicResource MaterialDesignHeadline5TextBlock}" x:Name="tlQuestion" Text="Em hãy tự ra một bài toán và giải bài toán đó." TextWrapping="Wrap"></TextBlock>
+                <materialDesign:Card Visibility="Hidden" x:Name="card2" Padding="16" Margin="8" Grid.Row="0">
+                    <TextBlock Style="{DynamicResource MaterialDesignHeadline5TextBlock}" Text="Dạng tự ra đề rồi giải" TextWrapping="Wrap"></TextBlock>
                 </materialDesign:Card>
-                <Label Content="Bài toán: " Name="lab1" Grid.Row="1" FontSize="18" FontWeight="Bold" Margin="0,0,0,1"/>
-                <Label Content="Đề bài: " Visibility="Hidden" Name="lab2" Grid.Row="1" FontSize="18" FontWeight="Bold" Margin="0,0,0,1"/>
-                <Label Content="Bài giải: " Grid.Row="1" Grid.Column="1" FontSize="18" FontWeight="Bold" Margin="0,0,0,1"/>
-                <TextBox Grid.Row="2" Background="AliceBlue" Margin="5,1,6,0" Name="BaiToan" IsReadOnly="True">
-                </TextBox>
-                <TextBox Grid.Row="2" Grid.Column="1" Background="AliceBlue" Margin="6,1,5,0" Name="LoiGiai" IsReadOnly="True">
-                </TextBox>
+                <TextBox Grid.Row="1" FontSize="20" Background="AliceBlue" Margin="5,0,0,0"  x:Name="tblQuestion"/>
+                <TextBox Grid.Row="1" Visibility="Hidden" x:Name="tlQuestion" materialDesign:HintAssist.Hint="Em hãy tự ra một bài toán và giải bài toán đó." FontSize="20" Background="AliceBlue" Margin="5,0,0,0" IsReadOnly="True"/>
 
-                <Grid Grid.Row="3" Grid.ColumnSpan="2" Margin="-8,14,8,0">
+                <Grid Grid.Row="2" Margin="-8,14,8,0">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition/>
                         <ColumnDefinition Width="60"></ColumnDefinition>
@@ -54,9 +47,6 @@
                     <TextBlock x:Name="tblMessage" Text="" Style="{StaticResource MaterialDesignBody1TextBlock}" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="436,19,187,18" Height="29" Width="0"/>
                     <Button x:Name="btnEdit" Grid.Column="1" Style="{StaticResource MaterialDesignFloatingActionAccentButton}" ToolTip="Edit" Width="48" Height="48" Click="btnEdit_Click">
                         <materialDesign:PackIcon Kind="Edit" Height="24" Width="24" />
-                    </Button>
-                    <Button x:Name="btnNext" Grid.Column="2" Style="{StaticResource MaterialDesignFloatingActionAccentButton}" ToolTip="Refresh" Width="48" Height="48" Click="btnNext_Click">
-                        <materialDesign:PackIcon Kind="ArrowRightBold" Height="24" Width="24" />
                     </Button>
                     <Button x:Name="btnCheckAnswer" Grid.Column="3" Style="{StaticResource MaterialDesignFloatingActionAccentButton}" ToolTip="Check the answer" Width="48" Height="48" Click="btnCheckAnswer_Click">
                         <materialDesign:PackIcon Kind="Check" Height="24" Width="24" />
