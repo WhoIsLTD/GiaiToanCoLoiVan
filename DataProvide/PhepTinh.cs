@@ -12,5 +12,6 @@ namespace DataProvide
         public string LoiGiai { get; set; }
         public string BaiToan{ get; set; }
         public bool Check { get; set; }
+        public string GoiY { get; set; }
     }
 }

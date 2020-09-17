@@ -39,3 +39,14 @@ C:\Users\xuppe\OneDrive\Tài liệu\GitHub\GiaiToanCoLoiVan\DataProvide\obj\De
 C:\Users\xuppe\OneDrive\Tài liệu\GitHub\GiaiToanCoLoiVan\DataProvide\obj\Debug\DataProvide.Properties.Resources.resources
 C:\Users\xuppe\OneDrive\Tài liệu\GitHub\GiaiToanCoLoiVan\DataProvide\obj\Debug\DataProvide.exe
 C:\Users\xuppe\OneDrive\Tài liệu\GitHub\GiaiToanCoLoiVan\DataProvide\obj\Debug\DataProvide.pdb
+C:\Users\xuppe\OneDrive\Máy tính\GiaiToanCoLoiVan\DataProvide\bin\Debug\DataProvide.exe.config
+C:\Users\xuppe\OneDrive\Máy tính\GiaiToanCoLoiVan\DataProvide\bin\Debug\DataProvide.exe
+C:\Users\xuppe\OneDrive\Máy tính\GiaiToanCoLoiVan\DataProvide\bin\Debug\DataProvide.pdb
+C:\Users\xuppe\OneDrive\Máy tính\GiaiToanCoLoiVan\DataProvide\obj\Debug\DataProvide.csprojAssemblyReference.cache
+C:\Users\xuppe\OneDrive\Máy tính\GiaiToanCoLoiVan\DataProvide\obj\Debug\App.g.cs
+C:\Users\xuppe\OneDrive\Máy tính\GiaiToanCoLoiVan\DataProvide\obj\Debug\DataProvide_MarkupCompile.cache
+C:\Users\xuppe\OneDrive\Máy tính\GiaiToanCoLoiVan\DataProvide\obj\Debug\DataProvide.Properties.Resources.resources
+C:\Users\xuppe\OneDrive\Máy tính\GiaiToanCoLoiVan\DataProvide\obj\Debug\DataProvide.csproj.GenerateResource.cache
+C:\Users\xuppe\OneDrive\Máy tính\GiaiToanCoLoiVan\DataProvide\obj\Debug\DataProvide.csproj.CoreCompileInputs.cache
+C:\Users\xuppe\OneDrive\Máy tính\GiaiToanCoLoiVan\DataProvide\obj\Debug\DataProvide.exe
+C:\Users\xuppe\OneDrive\Máy tính\GiaiToanCoLoiVan\DataProvide\obj\Debug\DataProvide.pdb

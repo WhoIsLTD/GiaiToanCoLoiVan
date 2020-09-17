@@ -25,18 +25,7 @@ namespace TuRaDeTheoPhepTinh
         public Mainn()
         {
             InitializeComponent();
-
         }
-        private void LoadWindow()
-        {
-        }
-
-        private void Window_Loaded(object sender, RoutedEventArgs e)
-        {
-            LoadWindow();
-        }
-
-
 
         private void TuRaDe_Click(object sender, RoutedEventArgs e)
         {
@@ -53,9 +42,5 @@ namespace TuRaDeTheoPhepTinh
             sp4.Children.Add(mainWindow);
         }
 
-        private void but2_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
     }
 }

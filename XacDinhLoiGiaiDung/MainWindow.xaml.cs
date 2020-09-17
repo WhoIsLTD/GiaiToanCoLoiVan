@@ -99,7 +99,6 @@ namespace XacDinhLoiGiaiDung
             RadioButton radioButton = new RadioButton();
             radioButton.FontSize = 14;
             radioButton.FontFamily = new FontFamily("Arial");
-            //radioButton.FontWeight = quizInfo_.Bold == true ? FontWeights.Bold : FontWeights.Normal;
             radioButton.Content = answer1.Values;
             if (answer1.Checked == true)
                 answer_ = answer1.Values;

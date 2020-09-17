@@ -34,12 +34,14 @@ namespace TuRaDeTheoPhepTinh
         private void setData()
         {
             phepTinh.DeBai = tblQuestion.Text;
+            phepTinh.GoiY = Hint.Text;
             //phepTinh.BaiToan = BaiToan.Text;
             //phepTinh.LoiGiai = LoiGiai.Text;
         }
         private void LoadData()
         {
             tblQuestion.Text = phepTinh.DeBai;
+            Hint.Text = phepTinh.GoiY;
             //BaiToan.Text = phepTinh.BaiToan;
             //LoiGiai.Text = phepTinh.LoiGiai;
         }
@@ -53,14 +55,14 @@ namespace TuRaDeTheoPhepTinh
             LoadData();
         }
 
-        private void btnEdit_Click(object sender, RoutedEventArgs e)
+        private void BtnClose_Click(object sender, RoutedEventArgs e)
         {
             this.Close();
         }
         private void btnCheckAnswer_Click(object sender, RoutedEventArgs e)
         {
 
-            if (But1.IsChecked == true)
+            if (BtnPhepTinh.IsChecked == true)
                 phepTinh.Check = true;
             else
                 phepTinh.Check = false;
@@ -68,27 +70,33 @@ namespace TuRaDeTheoPhepTinh
             this.DialogResult = true;
         }
 
-        private void But2_Click(object sender, RoutedEventArgs e)
+        private void BtnTuRaDe_Click(object sender, RoutedEventArgs e)
         {
-            if (But2.IsChecked == true)
+            if (BtnTuRaDe.IsChecked == true)
             {
                 card2.Visibility = Visibility.Visible;
                 tlQuestion.Visibility = Visibility.Visible;
                 card1.Visibility = Visibility.Hidden;
                 tblQuestion.Visibility = Visibility.Hidden;
+                Hint.Visibility = Visibility.Hidden;
+                GoiY.Visibility = Visibility.Hidden;
             }
         }
 
-        private void But1_Click(object sender, RoutedEventArgs e)
+        private void BtnPhepTinh_Click(object sender, RoutedEventArgs e)
         {
-            if (But1.IsChecked == true)
+            if (BtnPhepTinh.IsChecked == true)
             {
                 card1.Visibility = Visibility.Visible;
                 tblQuestion.Visibility = Visibility.Visible;
                 card2.Visibility = Visibility.Hidden;
                 tlQuestion.Visibility = Visibility.Hidden;
+                Hint.Visibility = Visibility.Visible;
+                GoiY.Visibility = Visibility.Visible;
+
             }
         }
+
 
         //private void Next()
         //{

@@ -29,6 +29,8 @@ namespace TuRaDeTheoPhepTinh
 
         private PhepTinh phepTinh = new PhepTinh();
         private TuRaDe tuRa = new TuRaDe();
+        private bool click = false;
+        private string filenamee = "";
 
         //private int i = 0, j = 0;
 
@@ -57,6 +59,8 @@ namespace TuRaDeTheoPhepTinh
                 tblQuestion.Text = phepTinh.DeBai;
                 BaiToan0.Text = phepTinh.BaiToan;
                 LoiGiai0.Text = phepTinh.LoiGiai;
+                if (Hint.Text == "Gợi ý: ")
+                    Hint.Text += phepTinh.GoiY;
                 card0.Visibility = Visibility.Visible;
                 lab0.Visibility = Visibility.Visible;
                 title0.Visibility = Visibility.Visible;
@@ -84,15 +88,7 @@ namespace TuRaDeTheoPhepTinh
                 LoiGiai0.Visibility = Visibility.Hidden;
             }
         }
-        //private PhepTinh AddList()
-        //{
-        //    PhepTinh phepTinh = new PhepTinh();
-        //    phepTinh.DeBai = "Em hãy tự tạo ra một bài toán có phép tính sau: 10 + 7. Sau đó giải bài toán đó.";
-        //    phepTinh.BaiToan = @"";
-        //    phepTinh.LoiGiai = @"";
-        //    phepTinh.Check = true;
-        //    return phepTinh;
-        //}
+
         //public void Next()
         //{
         //    i++;
@@ -105,6 +101,7 @@ namespace TuRaDeTheoPhepTinh
                 DeBai = "Em hãy tự tạo ra một bài toán có phép tính sau: 10 + 7. Sau đó giải bài toán đó.",
                 BaiToan = @"",
                 LoiGiai = @"",
+                GoiY = "",
                 Check = true
             };
             return phepTinh;
@@ -113,25 +110,10 @@ namespace TuRaDeTheoPhepTinh
         {
             SetData();
         }
-        //private List<PhepTinh> GetXML()
-        //{
-        //    var doc = XDocument.Load(Environment.CurrentDirectory + "/Ques/Users.xml");
-
-        //    var people = doc.Root
-        //        .Descendants("BaiTap")
-        //        .Select(node => new PhepTinh
-        //        {
-        //            BaiToan = node.Element("BaiToan").Value,
-        //            DeBai = node.Element("DeBai").Value,
-        //            LoiGiai = node.Element("LoiGiai").Value,
-        //            Check = bool.Parse(node.Element("Check").Value)
-        //        })
-        //        .ToList();
-        //    return people;
-        //}
 
         private void btnEdit_Click(object sender, RoutedEventArgs e)
         {
+            Hint.Visibility = Visibility.Hidden;
             EditTuRaDe editTuRaDe = new EditTuRaDe(phepTinh);
             bool? result = editTuRaDe.ShowDialog();
             if (result == true)
@@ -139,6 +121,7 @@ namespace TuRaDeTheoPhepTinh
                 //phepTinh = editTuRaDe.GetPhepTinh();
                 phepTinh = editTuRaDe.GetPhepTinh();
                 //i += 1;
+                Hint.Text = "Gợi ý: ";
                 SetData();
             }
         }
@@ -153,12 +136,14 @@ namespace TuRaDeTheoPhepTinh
         private void btnSave_Click(object sender, RoutedEventArgs e)
         {
             SaveFileDialog saveFileDialog = new SaveFileDialog();
+            saveFileDialog.FileName = filenamee;
             XDocument Xdoc = new XDocument();
             if (phepTinh.Check == true)
             {
 
                 saveFileDialog.Filter = "XML Files (*.pt)|*.pt";
                 bool? result = saveFileDialog.ShowDialog();
+
                 if (result == true)
                 {
                     //if (System.IO.File.Exists(Environment.CurrentDirectory + "/Ques/Users.xml"))
@@ -170,6 +155,7 @@ namespace TuRaDeTheoPhepTinh
                                     new XElement("DeBai", tblQuestion.Text),
                                     new XElement("BaiToan", BaiToan0.Text),
                                     new XElement("LoiGiai", LoiGiai0.Text),
+                                    new XElement("GoiY", phepTinh.GoiY),
                                     new XElement("Check", phepTinh.Check)
                                     );
                     if (Xdoc.Descendants().Count() > 0)
@@ -202,12 +188,13 @@ namespace TuRaDeTheoPhepTinh
         {
             OpenFileDialog openFileDialog = new OpenFileDialog();
             openFileDialog.Filter = "XML Files (*.pt)|*.pt|XML Files (*.rd)|*.rd";
-            bool? result = openFileDialog.ShowDialog();
+            bool ? result = openFileDialog.ShowDialog();
             if (result == true)
             {
                 var doc = XDocument.Load(openFileDialog.FileName);
                 FileInfo file = new FileInfo(openFileDialog.FileName);
                 string ext = file.Extension;
+                filenamee = file.Name;
 
                 if (ext == ".pt")
                 {
@@ -216,12 +203,14 @@ namespace TuRaDeTheoPhepTinh
                         BaiToan = node.Element("BaiToan").Value,
                         DeBai = node.Element("DeBai").Value,
                         LoiGiai = node.Element("LoiGiai").Value,
+                        GoiY = node.Element("GoiY").Value,
                         Check = bool.Parse(node.Element("Check").Value)
                     })
                     .ToList();
                     phepTinh.BaiToan = people[0].BaiToan;
                     phepTinh.DeBai = people[0].DeBai;
                     phepTinh.LoiGiai = people[0].LoiGiai;
+                    phepTinh.GoiY = people[0].GoiY;
                     phepTinh.Check = people[0].Check;
                 }
                 else
@@ -241,5 +230,18 @@ namespace TuRaDeTheoPhepTinh
 
         }
 
+        private void BtnHint_Click(object sender, RoutedEventArgs e)
+        {
+            if (click == false)
+            {
+                click = true;
+                Hint.Visibility = Visibility.Visible;
+            }
+            else
+            {
+                click = false;
+                Hint.Visibility = Visibility.Hidden;
+            }
+        }
     }
 }

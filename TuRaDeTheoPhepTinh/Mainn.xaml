@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:TuRaDeTheoPhepTinh"
         mc:Ignorable="d"
-        Title="Chọn cái nào đây nhỉ?" Height="450" Width="600" Loaded="Window_Loaded">
+        Title="" Height="850" Width="1100">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="7*"/>
@@ -21,9 +21,7 @@
             <ComboBoxItem>
                 <Button x:Name="ChonDapAn" Click="ChonDapAn_Click" Width="600" >Dạng chọn đáp án đúng</Button>
             </ComboBoxItem>
-            <ComboBoxItem>
-                <Button x:Name="but2" Width="600" Click="but2_Click">Hay là chọn cái này?</Button>
-            </ComboBoxItem>
+
         </ComboBox>
         <Viewbox Grid.Row="1" Stretch="Fill" Margin="0,0.2,-0.4,0">
             <StackPanel x:Name="sp4">

@@ -18,9 +18,9 @@
                 <TextBlock Style="{DynamicResource MaterialDesignHeadline5TextBlock}" x:Name="tblQuestion" Text="Question" TextWrapping="Wrap" Width="693"></TextBlock>
             </StackPanel>
         </materialDesign:Card>
-        <Border Padding="16" Margin="1,2,1,0" Grid.Row="1">
+        <Border Padding="16" Grid.Row="1">
             <ScrollViewer VerticalScrollBarVisibility="Auto">
-                <UniformGrid x:Name="spMainControl" Columns="2" Rows="2">
+                <UniformGrid  x:Name="spMainControl" Columns="2" >
 
                 </UniformGrid>
             </ScrollViewer>
